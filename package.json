@@ -1,0 +1,24 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "description": "auth-service/\r │\r ├── src/\r │   ├── config/\r │   │   ├── envConfig.js       # Variables de entorno\r │   │   └── database.js        # Conexión a la base de datos (si es necesario)\r │   ├── controllers/\r │   │   └── authController.js  # Lógica de negocio para autenticación\r │   ├── middleware/\r │   │   └── authMiddleware.js  # Middleware para proteger rutas\r │   ├── routes/\r │   │   └── authRoutes.js      # Rutas relacionadas con autenticación\r │   ├── app.js                 # Configuración de la aplicación Express\r │   └── server.js              # Punto de entrada del servidor\r │\r ├── .env                       # Variables de entorno\r ├── .gitignore                 # Archivos y carpetas a ignorar en Git\r └── package.json               # Dependencias y scripts",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auth": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
