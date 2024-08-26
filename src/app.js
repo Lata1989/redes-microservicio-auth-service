@@ -11,4 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parsear cuerpos URL-encod
 // Rutas
 app.use('/auth', authRoutes);
 
+// Ruta raíz
+app.get('/', (req, res) => {
+    res.send('Microservicio de autenticacion funcionando OK!');
+});
+
 export default app;
