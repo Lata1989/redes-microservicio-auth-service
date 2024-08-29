@@ -18,12 +18,11 @@ export async function registerUser(req, res) {
       const newUser = { username, password, createdAt: new Date(), updatedAt: new Date() };
       await usersCollection.insertOne(newUser);
   
-      // No se está generando ni devolviendo el token en esta versión del código
       res.status(201).json({ message: 'Usuario registrado exitosamente' });
     } catch (error) {
       res.status(500).json({ error: 'No se pudo registrar el usuario' });
     }
-  }
+}
 
 // Autenticar un usuario y generar un token JWT
 export async function authenticateUser(req, res) {
